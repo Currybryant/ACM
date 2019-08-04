@@ -1,9 +1,7 @@
 /****
-
 Longest Palindrome Substring
 
-
-
+Manacher Algorithm
 *****/
 #include <bits/stdc++.h>
 using namespace std;
