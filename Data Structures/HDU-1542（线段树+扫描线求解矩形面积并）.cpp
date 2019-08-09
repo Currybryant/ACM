@@ -10,15 +10,15 @@ const int maxn = 120+10;
 int n;
 double a[maxn*4];
 struct node{
-    double l, r, h;   ///×óÓÒÇø¼ä
-    int flag;       ///ÉÏ±ß1£¬ÏÂ±ß-1
+    double l, r, h;   ///å·¦å³åŒºé—´
+    int flag;       ///ä¸Šè¾¹1ï¼Œä¸‹è¾¹-1
 }L[maxn*4];
 bool cmp(const node &A, const node &B){
     return A.h < B.h;
 }
 struct SegmentTree{
-    int l, r, s;    ///×óÓÒÇø¼ä¡¢Çø¼äÊÇ·ñÍêÕû
-    double len; ///ÓĞĞ§³¤¶È
+    int l, r, s;    ///å·¦å³åŒºé—´ã€åŒºé—´æ˜¯å¦å®Œæ•´
+    double len; ///æœ‰æ•ˆé•¿åº¦
     #define l(p) tree[p].l
     #define r(p) tree[p].r
     #define s(p) tree[p].s
@@ -61,7 +61,7 @@ int main(){
         int num = 0;
         for(int i = 1; i <= n;  i++){
             double x1, x2, y1, y2;
-            cin>>x1>>y1>>x2>>y2;
+            scanf("%lf %lf %lf %lf", &x1, &y1, &x2, &y2);
             L[++num].l = x1; L[num].r = x2; L[num].h = y1; L[num].flag = 1; a[num] = x1;
             L[++num].l = x1; L[num].r = x2; L[num].h = y2; L[num].flag = -1; a[num] = x2;
         }
