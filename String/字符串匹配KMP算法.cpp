@@ -12,9 +12,11 @@ int n, m;
 char s[maxn], str[maxn];
 int nextn[maxn];
 /**
-    ´® str Óë´® s Æ¥Åä£¬
-    ÏÈ»ñÈ¡´® str µÄ nextnÊı×é£¬
-    ÔÙÓë´® s ½øĞĞÆ¥Åä
+    ä¸² str ä¸ä¸² s åŒ¹é…ï¼Œ
+    å…ˆè·å–ä¸² str çš„ nextnæ•°ç»„ï¼Œ
+    å†ä¸ä¸² s è¿›è¡ŒåŒ¹é…
+    
+    nextnæ•°ç»„è¡¨ç¤ºå«ä¹‰ï¼šæœ€é•¿å…¬å…±å‰ç¼€åç¼€
 
 **/
 void getnext(int len)
@@ -45,8 +47,8 @@ int KMP(int n, int m)
         else j = nextn[j];
         if(j == m){res ++; j = 0;};
     }
-//    return j == m ? i - j + 1 : -1; ///·µ»ØÊ×´ÎÆ¥Åä³É¹¦µÄÏÂ±ê
-    return res ;///·µ»ØÆ¥Åä³É¹¦µÄ´ÎÊı
+//    return j == m ? i - j + 1 : -1; ///è¿”å›é¦–æ¬¡åŒ¹é…æˆåŠŸçš„ä¸‹æ ‡
+    return res ;///è¿”å›åŒ¹é…æˆåŠŸçš„æ¬¡æ•°
 }
 
 int main()
