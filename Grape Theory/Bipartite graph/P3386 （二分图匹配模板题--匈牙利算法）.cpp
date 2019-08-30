@@ -10,8 +10,8 @@ using namespace std;
 const int maxn = 2e3+100;
 int n, m, E;
 int tot, ver[2000100], head[2000100], Next[2000100];
-int match[maxn];
-bool vis[maxn];
+int match[maxn]; ///大小和定点个数相同
+bool vis[maxn]; ///与 一个集合的大小相同
 
 void addedge(int x, int y){
     ver[++ tot] = y; Next[tot] = head[x]; head[x] = tot;
